@@ -1,33 +1,36 @@
 package main
 
-import ("fmt", "error")
+import (
+	"errors"
+	"fmt"
+)
 
-
-type Cachorro struct{
+type Cachorro struct {
 	idade int
-	nome string
-
-
+	nome  string
 }
-dfs
-func divisão(n int,n2 int,err error){
-	if (n2 == 0){
-	return 0, errors.New("Não pode dividir por 10")
-}
-	return n/n2, nil
 
+func divisao(n, n2 int) (int, error) {
+	if n2 == 0 {
+		return 0, errors.New("Não pode dividir por 0")
+	}
+	return n / n2, nil
 
 }
 
-func main () {
+func main() {
 	var husky Cachorro
 	husky.idade = 12
 	husky.nome = "holy"
 
 	fmt.Println(husky.idade, "---", husky.nome)
+	resultado, err := divisao(10, 0)
+	if err != nil {
+		fmt.Println("Erro:", err)
+		return
+	}
+	fmt.Println(resultado)
 
-
-	divisão(10)
 }
 
-
+//fmt.Println("Resultado da divisão:", resultado)
