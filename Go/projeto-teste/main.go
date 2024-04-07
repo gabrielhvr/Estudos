@@ -1,9 +1,10 @@
 package main
 
+import "log"
 
 
 func main (){
-teste()
+	log.Fatal(novoServidor(1).ListenAndServe())
 }
 
 

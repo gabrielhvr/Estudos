@@ -2,8 +2,8 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
-	"log"
+	//"fmt"
+	//"log"
 	"net/http"
 )
 func PrimeiroHandle(w http.ResponseWriter,r *http.Request){
@@ -31,6 +31,7 @@ func PrimeiroHandle(w http.ResponseWriter,r *http.Request){
 	w.Write(b)
 
 }
+/*
 func teste(){
 	fmt.Println("testando o servidor")
 	http.HandleFunc("/", PrimeiroHandle)
@@ -39,4 +40,6 @@ func teste(){
 
 
 	log.Fatal(http.ListenAndServe(":8080", nil))
-}
+}*/
+
+
