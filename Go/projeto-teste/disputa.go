@@ -1,6 +1,6 @@
 package main
 
 type Disputa struct{
-	FilmeA Filme
-	FilmeB Filme
+	FilmeA Filme `json : "filmea"`
+	FilmeB Filme `json : "filmeb"`
 }

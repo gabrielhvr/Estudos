@@ -5,6 +5,7 @@ import (
 )
 func TratamentoErro(err error){
 	if err != nil {
-		fmt.Println("Error: ", err)
+		fmt.Printf("Error: %v", err)
 	}
+	
 }

@@ -2,9 +2,10 @@ package main
 
 
 type Filme struct {
-	Nome string
-	Ano int
+	Nome string `json: "nome"`
+	Ano int `json: "ano"`
 }
+
 
 
 /*func (f Filme) getNome() string{
